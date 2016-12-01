@@ -17,7 +17,7 @@ function mathEval(exp) {
 
     // Don't eval if our replace function flagged as invalid
     if (!valid)
-        alert("Invalid arithmetic expression");
+        document.getElementById("result").innerText = "Invalid arithmetic expression";
     else
-        try { alert(eval(exp)); } catch (e) { alert("Invalid arithmetic expression"); };
+        try { document.getElementById("result").innerText = eval(exp); } catch (e) { document.getElementById("result").innerText = "Invalid arithmetic expression"; };
 }
